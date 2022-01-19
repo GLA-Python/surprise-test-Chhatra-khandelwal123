@@ -1,0 +1,24 @@
+n=int(input())
+def looknsay(n):
+    prev=" "
+    curr=" "
+    ans=" "
+    for i in range(0,n):
+        ans=""
+        if i==0:
+            ans="1"
+            prev="1"
+        else:
+            count=1
+            c=prev[0]
+            for i in range(1,len(prev)):
+                if prev[j-1]==prev[j]:
+                    count+=1
+                else:
+                    ans+=str(count)+c
+                    c=prev[j]
+                    count=1
+            ans+=str(count)+c
+            prev=ans
+        print(ans)
+looknsay(n)
