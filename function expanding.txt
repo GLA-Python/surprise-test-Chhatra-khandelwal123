@@ -1,0 +1,10 @@
+l=[2,3,7,2,9]
+def expan(l):
+    prev=-1
+    for i in range(0,len(l)-1):
+        if (abs(l[i]-l[i+1]<=prev)):
+            return False
+        else:
+            prev=abs(l[i]-l[i+1])
+        return True
+print(expan(l))
